@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+</head>
+<body>
+    <script>
+        okiguess = ["Wow, just rude. You just put in something random, just to see what would happen? Dissapointing. Not even gonna tell you how to restart just because of how dissapointed I", " AM!"]
+        let RNJesus = Math.floor(Math.random()*7)
+        let RNJesus2 = Math.floor(Math.random()*7)
+        let RNJesus3 = Math.floor(Math.random()*7)
+        alert("It's been 10 years since your last adventure. After being forced to work for years, you've finally escaped, and it's time to get revenge.")
+        let a = prompt("You have encountered an enemy. You may choose to attack,flee or hide.")
+        if (a == "hide"){
+            alert("They found you hiding in the bush. Next time, pick a better hiding spot. Refresh the page to restart.")
+            exit()
+        }
+        else if (a == "attack" && RNJesus <=3) {
+            alert("Your attack wasn't powerful enough! Wow you need a better weapon. Anyways, you died. Refresh the page to restart.")
+            exit()
+
+
+        }
+        else if (a == "attack" && RNJesus >=4) {
+            alert("Your attack was powerful enough, you defeated the enemy! But you still need a better weapon.")
+        }
+        else if (a == "flee" && RNJesus >=4){
+            alert("You ran away and hid away forever. You technically win since the game ended and you survived, but did you really win?")
+            exit()
+        }
+        else if (a == "flee" && RNJesus <=3) {
+            alert("You fled past the guards so quickly, they didn't see you. Wow that was lucky.")
+
+        }        else {
+            alert(okiguess)
+            exit()
+        }
+            
+        //for(i=0;i < okiguess.length;i++) {
+          //  alert(okiguess[i])
+            //exit()
+       // }
+        let c = prompt("After getting past the guards, you are at your previous captor's house. You have decided to defeat them and free everyone. Choose between a knife,magic or pacifism?")
+        if (c == "knife" && RNJesus2 >=4) {
+            alert("You defeated your captor with your epic knife skills, epic! You have won!")
+        }
+        else if (c == "knife" && RNJesus2 <=3) {
+            alert("Your attack had no effect, wow you're weak. You've died, F.")
+            exit()
+        }
+        else if (c == "magic" && RNJesus2 >=4) {
+            alert("Your physical strength is too much to use magic! You've died, rest in pepperonis.")
+            exit()
+        }
+        else if (c == "magic" && RNJesus2 <=3) {
+            alert("Your physical strength is so weak that the magic felt pity on you and helped you! That's both sad and hilarious at the same time. You've won!")
+        }
+        else if(c == "pacifism") {
+            alert("Your captor laughed at you and then killed you. What were you thinking? You've lost, unsurprisngly.")
+            exit()
+        }        else {
+            alert(okiguess)
+            exit()
+        }
+
+        alert("Oh no! He's raised an apprentice, now you have to fight them!")
+        let d = prompt("Choose magic or knife, but you can't use the same ability as last time!")
+        if (c == "knife" && d == "knife"){
+            alert("We warned you. Your attack backfired and ending up causing you to lose! You have died. Refresh the page to restart.")
+            exit()
+        }
+        else if(c == "magic" && d == "knife" && RNJesus3 >=4){
+            alert("You were able to defeat his apprentice, you have won! Collect $200 from passing Go.")
+        }       
+        else if(c == "magic" && d == "knife" && RNJesus3 <=3){
+            alert("Your attack failed, you have lost! Do not collect $200 from passing Go, go straight to jail.")
+            exit()
+        }
+        else if(c == "magic" && d == "magic"){
+            alert("You were warned. Your attack backfired and ended up sending you to another dimension! You have died. Refresh the page to restart.")
+            exit()
+        }  
+        else if(c == "knife" && d == "magic" && RNJesus3 >=4){
+            alert("Cast Flamethrower for 15MP! It was super effective, Apprentice fainted! You have won!")
+        }
+
+        else if(c == "knife" && d == "magic" && RNJesus3 <=3){
+            alert("You tried to cast Flame Storm, but the Apprentice dodged it! Apprentice cast Defiance for 50MP! It was super effective, you fained! You have lost.")
+            exit()
+        } else {
+            alert(okiguess)
+            exit()
+        }
+
+
+ 
+
+        //for(i=0;i < okiguess.length;i++) {
+          //  alert(okiguess[i])
+        //}
+    
+
+    
+
+        
+
+    </script>
+</body>
+</html>
